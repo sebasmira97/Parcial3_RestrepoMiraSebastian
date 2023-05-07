@@ -7,7 +7,6 @@ namespace WashingCar.DAL.Entities
         [Key]
         [Required]
         public Guid Id { get; set; }
-        public ICollection<Vehicle> Vehicles { get; set; }
         public DateTime? CreationDate { get; set; }
         public DateTime? DeliveryDate { get; set; }
     }

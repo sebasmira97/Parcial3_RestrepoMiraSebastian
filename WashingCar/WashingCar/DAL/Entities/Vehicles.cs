@@ -7,8 +7,8 @@ namespace WashingCar.DAL.Entities
         [Key]
         [Required]
         public Guid Id { get; set; }
-        public ICollection<Service> Services { get; set; }
         public string? Owner { get; set; }
         public string? NumberPlate { get; set; }
+        public ICollection<VehicleDetail> VehicleDetails { get; set; }
     }
 }
