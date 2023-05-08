@@ -15,6 +15,8 @@ builder.Services.AddDbContext<DatabaseContext>(o =>
     o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
 builder.Services.AddIdentity<User, IdentityRole>(io =>
 {
     io.User.RequireUniqueEmail = true; //Valida que el email no esté repetido
